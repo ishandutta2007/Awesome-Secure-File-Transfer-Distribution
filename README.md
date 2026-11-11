@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Secure-File-Transfer-Distribution/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Secure-File-Transfer-Distribution?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-File-Transfer-Distribution/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Secure-File-Transfer-Distribution?style=flat-square&logo=github&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Secure-File-Transfer-Distribution/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Secure-File-Transfer-Distribution?style=flat-square&logo=github" alt="Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Secure-File-Transfer-Distribution/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Secure-File-Transfer-Distribution?style=flat-square&color=blue" alt="Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Secure-File-Transfer-Distribution/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License: CC0 1.0" /></a>
@@ -61,7 +61,7 @@ Commercial, enterprise-grade cloud and hybrid Managed File Transfer (MFT) suites
 
 Self-hosted, community-driven, and verifiable cryptographic file distribution engines. Listed below in **descending order by GitHub stargazers count**.
 
-| Tool | GitHub Stars 🌟 | Stack / Architecture ⚙️ | License 📜 | Description & Key Capabilities 💡 |
+| Tool | GitHub_Stars 🌟 | Stack / Architecture ⚙️ | License 📜 | Description & Key Capabilities 💡 |
 |---|---|---|---|---|
 | **[LocalSend](https://github.com/localsend/localsend)** | <a href="https://github.com/localsend/localsend/stargazers"><img src="https://img.shields.io/github/stars/localsend/localsend?style=social&color=white" alt="LocalSend Stars" /></a> | Flutter / Dart / Rust | MIT | Open-source cross-platform alternative to AirDrop. Securely shares files, media, and text across local networks using HTTPS with custom TLS certificates and zero third-party internet dependencies. |
 | **[Syncthing](https://github.com/syncthing/syncthing)** | <a href="https://github.com/syncthing/syncthing/stargazers"><img src="https://img.shields.io/github/stars/syncthing/syncthing?style=social&color=white" alt="Syncthing Stars" /></a> | Go / Web GUI | MPL-2.0 | Continuous, decentralized, and bidirectional file synchronization program. Employs the Block Exchange Protocol (BEP) over TLS with cryptographic node authentication and perfect forward secrecy. |
@@ -110,7 +110,7 @@ Contributions, software submissions, and improvements are warmly welcome! If you
 
 1. 🍴 Fork this repository.
 2. 🌿 Create a new feature branch (`git checkout -b feature/add-new-mft-tool`).
-3. 📝 Add your tool in the relevant table adhering to formatting standards (specific pricing, exact trial limits, star badges, and verified protocols).
+3. 📝 Add your tool in the relevant table adhering to formatting standards (specific pricing, exact trial limits, Stars_Badges, and verified protocols).
 4. 🚀 Submit a Pull Request with a clear description and links.
 
 Please refer to [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for more curated tech stacks and awesome list collections.
