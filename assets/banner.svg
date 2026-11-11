@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      fill: #94a3b8;
+      letter-spacing: 0.3px;
+    }
+    .tag-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+
+    /* Ambient background animations */
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-25px) translateX(15px); opacity: 0.8; }
+    }
+    @keyframes pulseDataBeam {
+      0% { stroke-dashoffset: 400; opacity: 0.2; }
+      50% { opacity: 0.8; }
+      100% { stroke-dashoffset: 0; opacity: 0.2; }
+    }
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.03); opacity: 1; }
+    }
+
+    .particle-1 { animation: floatParticle 6s ease-in-out infinite; }
+    .particle-2 { animation: floatParticle 8s ease-in-out infinite 1s; }
+    .particle-3 { animation: floatParticle 7s ease-in-out infinite 2.5s; }
+    
+    .data-stream {
+      stroke: url(#accentGrad);
+      stroke-width: 2;
+      stroke-dasharray: 20 180;
+      animation: pulseDataBeam 5s linear infinite;
+    }
+
+    .shield-orbit {
+      transform-origin: 1040px 180px;
+      animation: rotateRing 25s linear infinite;
+    }
+
+    .badge-card {
+      animation: subtlePulse 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Cyber Tech Grid Pattern -->
+  <g opacity="0.08">
+    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" stroke="#38bdf8" stroke-width="1" />
+    <path d="M 150,0 L 150,360 M 300,0 L 300,360 M 450,0 L 450,360 M 600,0 L 600,360 M 750,0 L 750,360 M 900,0 L 900,360 M 1050,0 L 1050,360" stroke="#38bdf8" stroke-width="1" />
+  </g>
+
+  <!-- Dynamic Data Packet Transmission Streams (Ambient Background) -->
+  <path d="M 100 80 Q 400 30 700 80 T 1150 120" fill="none" class="data-stream" />
+  <path d="M 50 280 Q 350 330 650 280 T 1100 240" fill="none" class="data-stream" style="animation-duration: 6s; animation-delay: -2s;" />
+
+  <!-- Ambient Glowing Particles -->
+  <circle cx="220" cy="70" r="4" fill="#38bdf8" class="particle-1" filter="url(#glow)" />
+  <circle cx="580" cy="310" r="3.5" fill="#818cf8" class="particle-2" filter="url(#glow)" />
+  <circle cx="850" cy="60" r="4.5" fill="#c084fc" class="particle-3" filter="url(#glow)" />
+  <circle cx="950" cy="300" r="3" fill="#38bdf8" class="particle-1" style="animation-delay: 3s;" filter="url(#glow)" />
+
+  <!-- Right Decorative Iconography: Cryptographic Shield & Nodes -->
+  <g transform="translate(1000, 180)">
+    <!-- Rotating Cyber Orbit Ring -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="8 12" opacity="0.4" class="shield-orbit" />
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="14 10" opacity="0.5" class="shield-orbit" style="animation-direction: reverse; animation-duration: 18s;" />
+    
+    <!-- Shield Aura Background Glow -->
+    <circle cx="0" cy="0" r="65" fill="#6366f1" opacity="0.15" filter="url(#glow)" />
+
+    <!-- Isometric Shield & Lock Base -->
+    <path d="M 0 -45 L 38 -25 L 38 18 Q 38 48 0 65 Q -38 48 -38 18 L -38 -25 Z" fill="url(#shieldGrad)" stroke="#38bdf8" stroke-width="2.5" />
+    
+    <!-- Padlock Graphic inside Shield -->
+    <rect x="-16" y="-5" width="32" height="26" rx="4" fill="#0f172a" stroke="#ffffff" stroke-width="2" />
+    <path d="M -10 -5 L -10 -15 C -10 -22 10 -22 10 -15 L 10 -5" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="0" cy="8" r="3" fill="#38bdf8" />
+  </g>
+
+  <!-- Left / Center Foreground Content (Title, Subtitle, Badges) -->
+  <g transform="translate(80, 0)">
+    <!-- Top Mini Category Tag -->
+    <g transform="translate(0, 65)">
+      <rect width="185" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.9" />
+      <circle cx="16" cy="14" r="4.5" fill="#38bdf8" filter="url(#subtleGlow)" />
+      <text x="30" y="19" class="tag-text" fill="#38bdf8">ENTERPRISE SECURITY</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 135)">
+      <text x="0" y="0" class="title">Awesome Secure File Transfer</text>
+      <text x="0" y="48" class="title" fill="url(#accentGrad)">&amp; Distribution 🔒</text>
+    </g>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="222" class="subtitle">
+      Enterprise MFT platforms, end-to-end encrypted distribution protocols &amp; self-hosted vault architectures.
+    </text>
+
+    <!-- Feature Pillar Badges / Pills -->
+    <g transform="translate(0, 260)">
+      <!-- Pill 1: E2E Encrypted -->
+      <g transform="translate(0, 0)">
+        <rect width="145" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="16" y="22" class="tag-text">🛡️ E2E Encrypted</text>
+      </g>
+      <!-- Pill 2: MFT & Compliance -->
+      <g transform="translate(157, 0)">
+        <rect width="175" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="16" y="22" class="tag-text">📋 MFT &amp; Compliance</text>
+      </g>
+      <!-- Pill 3: Zero-Knowledge -->
+      <g transform="translate(344, 0)">
+        <rect width="165" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="16" y="22" class="tag-text">⚡ Zero-Knowledge</text>
+      </g>
+      <!-- Pill 4: Open Source -->
+      <g transform="translate(521, 0)">
+        <rect width="150" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+        <text x="16" y="22" class="tag-text">🔓 Open Source</text>
+      </g>
+    </g>
+  </g>
+</svg>
